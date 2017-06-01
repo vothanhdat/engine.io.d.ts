@@ -7,6 +7,7 @@ declare namespace EngineIO {
     class _Events<T extends {[k:string]:any[]}> {
         addListener : <K extends keyof T>(type : K,cb : (e? : T[K][0],f? : T[K][1]) => void) => void
         on : <K extends keyof T>(type : K,cb : (e? : T[K][0],f? : T[K][1]) => void) => void
+        off : <K extends keyof T>(type : K,cb : (e? : T[K][0],f? : T[K][1]) => void) => void
         once : <K extends keyof T>(type : K,cb : (e? : T[K][0],f? : T[K][1]) => void) => void
         prependListener : <K extends keyof T>(type : K,cb : (e? : T[K][0],f? : T[K][1]) => void) => void
         prependOnceListener : <K extends keyof T>(type : K,cb : (e? : T[K][0],f? : T[K][1]) => void) => void
